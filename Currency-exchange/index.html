@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Currency Exchange - Viorel</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css"/ >
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>Currency Exchange using Fetch API</h1>
+      <div id="inputs">
+        <input type="number" id="first-input" class="crr-input" value="1" />
+        <span>=</span>
+        <input type="number" id="second-input" class="crr-input" />
+      </div>
+      <div id="currencies">
+        <select
+          name="currency1"
+          id="first-currency"
+          class="crr-select"
+          value="EUR"
+        ></select>
+        <select
+          name="currency2"
+          id="second-currency"
+          class="crr-select"
+          value="EUR"
+        ></select>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

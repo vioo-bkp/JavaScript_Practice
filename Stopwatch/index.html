@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stopwatch</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sw-container">
+        <div class="counter-container">
+          <span class="count">TOTAL:</span>
+          <span id="total-span">00:00:000</span>
+          <span class="count">LAP:</span>
+          <span id="lap-span">00:00:000</span>
+        </div>
+        <div class="btn-container">
+          <button id="btn-start" class="buttons stoped">START</button>
+          <button id="btn-reset" class="buttons">RESET</button>
+          <button id="btn-lap" class="buttons sw-stoped-lap">LAP</button>
+        </div>
+        <div class="laps">
+          <ol id="lap-list">
+            - Laps -
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
