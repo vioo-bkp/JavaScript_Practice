@@ -1,0 +1,386 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .absolute-hand {
+    position: absolute;
+    top: 50px;
+    left: -700px;
+    animation: show 1s ease-in-out 2s forwards;
+  }
+  
+  .absolute-watch {
+    position: absolute;
+    top: 70px;
+    left: 650px;
+    animation: mount 1s ease-in-out 2s forwards;
+  }
+  
+  .hand-container {
+    width: 600px;
+    height: 400px;
+    position: relative;
+  }
+  
+  .suit {
+    width: 200px;
+    height: 300px;
+    background-color: #1a2541;
+    border: 2px solid black;
+    border-radius: 0% 2% 2% 0%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+  }
+  
+  .buttons {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 10px 15px;
+  }
+  
+  .shirt {
+    width: 50px;
+    height: 275px;
+    background-color: white;
+    border: 2px solid black;
+    border-left: hidden;
+    border-radius: 0% 20% 20% 0%;
+    position: absolute;
+    top: 2.5%;
+    left: 32.5%;
+    z-index: 9;
+  }
+  
+  .hand {
+    width: 300px;
+    height: 250px;
+    background-color: #e6cdbe;
+    position: absolute;
+    top: 5.5%;
+    left: 37.5%;
+  }
+  
+  .finger1,
+  .finger2,
+  .finger3,
+  .finger4 {
+    width: 30px;
+    height: 65px;
+    background-color: #e6cdbe;
+    border-radius: 0% 80% 20% 0%;
+    border-top: 1px solid black;
+    position: absolute;
+    top: 5.5%;
+    left: 86.5%;
+  }
+  
+  .finger2 {
+    width: 45px;
+    height: 70px;
+    top: 21.5%;
+    border-radius: 0% 50% 20% 0%;
+  }
+  
+  .finger3 {
+    width: 50px;
+    height: 75px;
+    top: 39%;
+    border-radius: 0% 40% 20% 0%;
+  }
+  
+  .finger4 {
+    width: 60px;
+    height: 80px;
+    top: 57.5%;
+    left: 85%;
+    border-bottom: 1px solid black;
+    border-radius: 0% 50% 20% 0%;
+  }
+  
+  .finger5base {
+    width: 100px;
+    height: 100px;
+    background-color: #e6cdbe;
+    border-bottom: 1px solid black;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    border-radius: 0% 0% 0% 80%;
+    z-index: -1;
+  }
+  
+  .finger5 {
+    width: 120px;
+    height: 70px;
+    background-color: #e6cdbe;
+    border-radius: 0% 10% 10% 0%;
+    border: 1px solid black;
+    border-left: hidden;
+    position: absolute;
+    top: 67.5%;
+    left: 66%;
+  }
+  
+  .watch-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-strap,
+  .bottom-strap {
+    width: 85px;
+    height: 250px;
+    background: rgb(68, 41, 35);
+    background: linear-gradient(
+      27deg,
+      rgba(68, 41, 35, 1) 19%,
+      rgba(103, 47, 33, 1) 62%,
+      rgba(110, 48, 33, 1) 91%
+    );
+    border: 3px solid black;
+    border-radius: 50% 50% 5% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    animation: close 2s ease-in-out forwards;
+    z-index: 8;
+  }
+  
+  .bottom-strap {
+    border-radius: 5% 5% 50% 50%;
+  }
+  
+  .hole1,
+  .hole2,
+  .hole3 {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 10px 0px 20px 0px;
+    opacity: 1;
+    animation: disappear 1s linear forwards;
+  }
+  
+  @keyframes close {
+    from {
+      height: 250px;
+    }
+    to {
+      height: 50px;
+    }
+  }
+  
+  @keyframes disappear {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes mount {
+    from {
+      left: 650px;
+    }
+    to {
+      left: 220px;
+    }
+  }
+  
+  @keyframes show {
+    from {
+      left: -700px;
+    }
+    to {
+      left: 50px;
+    }
+  }
+  
+  .watch {
+    position: relative;
+    z-index: 7;
+  }
+  
+  .hanger1,
+  .hanger2,
+  .hanger3,
+  .hanger4 {
+    width: 10px;
+    height: 50px;
+    background: rgb(79, 79, 79);
+    background: linear-gradient(
+      27deg,
+      rgba(79, 79, 79, 1) 19%,
+      rgba(180, 180, 180, 1) 62%
+    );
+    position: absolute;
+    top: -10%;
+    left: 18%;
+    border-radius: 50% 0% 0% 0%;
+    z-index: -1;
+  }
+  
+  .hanger2 {
+    left: 75%;
+    border-radius: 0% 50% 0% 0%;
+  }
+  
+  .hanger3 {
+    top: 80%;
+    border-radius: 0% 0% 0% 50%;
+  }
+  
+  .hanger4 {
+    top: 80%;
+    left: 75%;
+    border-radius: 0% 0% 50% 0%;
+  }
+  
+  .frame {
+    width: 156px;
+    height: 156px;
+    border-radius: 50%;
+    background: rgb(95, 95, 95);
+    background: linear-gradient(
+      90deg,
+      rgba(95, 95, 95, 1) 28%,
+      rgba(145, 145, 145, 1) 55%,
+      rgba(212, 212, 212, 1) 94%
+    );
+    z-index: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .screen {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #fbfbfc;
+    border-radius: 50%;
+    background: rgb(108, 97, 68);
+    background: linear-gradient(
+      10deg,
+      rgba(108, 97, 68, 1) 13%,
+      rgba(91, 73, 69, 1) 40%,
+      rgba(96, 71, 60, 1) 83%
+    );
+    position: relative;
+  }
+  
+  .hour12,
+  .hour1,
+  .hour2,
+  .hour3,
+  .hour4,
+  .hour5,
+  .hour6,
+  .hour7,
+  .hour8,
+  .hour9,
+  .hour10,
+  .hour11 {
+    font-size: 15px;
+    color: #fbfbe1;
+    position: absolute;
+    top: 7.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hour1 {
+    top: 15%;
+    left: 72.5%;
+  }
+  .hour2 {
+    top: 30%;
+    left: 87.5%;
+  }
+  .hour3 {
+    top: 50%;
+    left: 92.5%;
+  }
+  .hour4 {
+    top: 70%;
+    left: 87.5%;
+  }
+  .hour5 {
+    top: 85%;
+    left: 72.5%;
+  }
+  .hour6 {
+    top: 92.5%;
+    left: 50%;
+  }
+  .hour7 {
+    top: 85%;
+    left: 27.5%;
+  }
+  .hour8 {
+    top: 70%;
+    left: 12.5%;
+  }
+  .hour9 {
+    top: 50%;
+    left: 7.5%;
+  }
+  .hour10 {
+    top: 30%;
+    left: 12.5%;
+  }
+  .hour11 {
+    top: 15%;
+    left: 27.5%;
+  }
+  
+  .hours,
+  .minutes,
+  .center {
+    width: 5px;
+    height: 40px;
+    background-color: #fbfbe1;
+    border-radius: 50% 50% 10% 10%;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  
+  .minutes {
+    width: 3px;
+    height: 60px;
+    top: 15%;
+    left: 64.5%;
+    transform: rotate(45deg);
+  }
+  
+  .center {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
